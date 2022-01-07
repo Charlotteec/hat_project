@@ -1,7 +1,7 @@
 import jetson.inference
 import jetson.utils
 
-net = jetson.inference.poseNet()
+net = jetson.inference.poseNet(overlay=False)
 camera = jetson.utils.videoSource("/dev/video0")
 display = jetson.utils.videoOutput("rtp://192.168.55.100:1234")
 
