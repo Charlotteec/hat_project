@@ -16,4 +16,4 @@ This algorithm gets the distance between the eyes, uses that to find the midpoin
 4. Use <code>python3 hat_live.py</code> to run the live demo.
 
 
-[Imgur](https://imgur.com/QgjAcaL)
+[View a Video Explanation here](https://imgur.com/QgjAcaL)
