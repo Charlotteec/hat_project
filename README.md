@@ -15,3 +15,4 @@ This algorithm gets the distance between the eyes, uses that to find the midpoin
 3. Change directories into this directory. 
 4. Use <code>python3 hat_live.py</code> to run the live demo.
 
+<blockquote class="imgur-embed-pub" lang="en" data-id="QgjAcaL"><a href="https://imgur.com/QgjAcaL">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
