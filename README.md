@@ -1,4 +1,4 @@
-# point_project
+# hat_project
 
 This project tracks a persons eye location in order to draw a little top head near their head. It depends on the **poseNet** network from **jetson-inference**. 
 
