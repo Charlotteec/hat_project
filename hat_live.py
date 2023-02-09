@@ -1,9 +1,9 @@
-import jetson.inference
-import jetson.utils
+import jetson_inference
+import jetson_utils
 
-net = jetson.inference.poseNet(overlay=False)
-camera = jetson.utils.videoSource("/dev/video0")
-display = jetson.utils.videoOutput("rtp://192.168.55.100:1234")
+net = jetson_inference.poseNet()
+camera = jetson_utils.videoSource("/dev/video0")
+display = jetson_utils.videoOutput("rtp://192.168.0.255:1234")
 
 while True:
 	img = camera.Capture()
@@ -27,9 +27,9 @@ while True:
 	    point_x = left_eye.x - (length/2)
 	    point_y = left_eye.y - length
 
-	jetson.utils.cudaDrawCircle(img, (point_x, point_y), 10, (255, 0, 0, 200))
-	jetson.utils.cudaDrawRect(img, (point_x-70, point_y,  point_x+100, point_y+10), (0, 0, 0))
-	jetson.utils.cudaDrawRect(img, (point_x-50, point_y+10, point_x+80, point_y-200), (0, 0, 0))
+	jetson_utils.cudaDrawCircle(img, (point_x, point_y), 10, (255, 0, 0, 200))
+	jetson_utils.cudaDrawRect(img, (point_x-70, point_y,  point_x+100, point_y+10), (0, 0, 0))
+	jetson_utils.cudaDrawRect(img, (point_x-50, point_y+10, point_x+80, point_y-200), (0, 0, 0))
 	display.Render(img)
 #	print(f"person {pose.ID} is pointing towards ({x}, {y})")
 
